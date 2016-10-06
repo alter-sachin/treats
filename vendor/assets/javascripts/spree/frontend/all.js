@@ -10,3 +10,6 @@
 
 //= require_tree .
 //= require spree/frontend/spree_auth
+//= require js/jquery.anythingslider
+//= require js/jquery.anythingslider.fx
+//= require js/jquery.anythingslider.video
