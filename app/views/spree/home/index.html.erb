@@ -1,4 +1,10 @@
- <div id="slideshow-wrap">
+<% content_for :sidebar do %>
+  <div data-hook="homepage_sidebar_navigation">
+    <%= render :partial => 'spree/shared/taxonomies' %>
+  </div>
+<% end %> 
+
+<div id="slideshow-wrap">
         <input type="radio" id="button-1" name="controls" checked="checked"/>
         <label for="button-1"></label>
         <input type="radio" id="button-2" name="controls"/>
@@ -309,11 +315,7 @@ input[type=radio]#button-5:checked~.arrows#arrow-4 { left: -73px }
 
 
 
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render :partial => 'spree/shared/taxonomies' %>
-  </div>
-<% end %>
+
 
 <div data-hook="homepage_products">
   <% cache(cache_key_for_products) do %>
