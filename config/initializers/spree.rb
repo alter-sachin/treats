@@ -22,7 +22,7 @@ Money::Currency.register({
    :priority        => 1,
    :iso_code        => "INR",
    :iso_numeric     => country.id,
-   :name            => "India",
+   :name            => "INDIA",
    :symbol          => "₹",
    :subunit         => "Paisa",
    :subunit_to_unit => 100,
