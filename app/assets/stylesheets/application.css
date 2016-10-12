@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+#spree-header #logo {
+    margin-bottom: 10px;
+    position: relative;
+    left: 30%;
+}
