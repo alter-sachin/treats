@@ -7,3 +7,9 @@
 #spree-header {
 background-color : black;
 }
+
+#spree-header #logo {
+    margin-bottom: 10px;
+    position: relative;
+    left: 30%;
+}
