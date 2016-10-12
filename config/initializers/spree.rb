@@ -14,6 +14,24 @@ Spree.config do |config|
   # Uncomment to stop tracking inventory levels in the application
   config.logo = 'logo/eattreat.png'
   #config.track_inventory_levels = false
+  country = Spree::Country.find_by_name('India')
+  config.default_country_id = country.id if country.present?
+  config.checkout_zone = country.id
+
+Money::Currency.register({
+   :priority        => 1,
+   :iso_code        => "INR",
+   :iso_numeric     => country.id,
+   :name            => "India",
+   :symbol          => "₹",
+   :subunit         => "Paisa",
+   :subunit_to_unit => 100,
+   :separator       => ".",
+   :delimiter       => ","
+})
+
+
+Spree::Price.update_all(currency: 'INR')
  
 end
 
